@@ -55,11 +55,11 @@ const Home = () => {
       const tempProcessedFileUrl = await response?.data?.processedFileUrl;
       setPrcessedFileUrl(tempProcessedFileUrl);
       alert("succefully processed Pdf");
+      setLoading(false);
     } catch (error) {
       console.log(error);
       alert(error.response?.data?.message);
     }
-    setLoading(false);
   };
 
   if (loading) {
