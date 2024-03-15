@@ -5,6 +5,7 @@ import Pdf from "../components/Pdf";
 import axios from "axios";
 import ViewPdf from "../components/ViewPdf";
 import { UserContext } from "../context/userContext";
+import Loader from "../components/Loader";
 
 const Home = () => {
   const { currUser } = useContext(UserContext);
@@ -15,6 +16,8 @@ const Home = () => {
   const [processedFileUrl, setPrcessedFileUrl] = useState("");
   const [viewProcessedPdf, setViewProcessedPdf] = useState(false);
   const [viewPdf, setViewPdf] = useState(false);
+
+  const [loading, setLoading] = useState(false);
 
   const handleFileChange = (e) => {
     setPdfFile(e.target.files[0]);
@@ -27,6 +30,7 @@ const Home = () => {
   const formSubmit = async (e) => {
     e.preventDefault();
     try {
+      setLoading(true);
       const formdata = new FormData();
       formdata.set("pdfFile", pdfFile);
       formdata.set("pageNumbers", selectedpages);
@@ -55,7 +59,12 @@ const Home = () => {
       console.log(error);
       alert(error.response?.data?.message);
     }
+    setLoading(false);
   };
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <div className=" pt-20 px-4 h-screen lg:pt-28">
@@ -85,7 +94,7 @@ const Home = () => {
               <input
                 type="file"
                 id="PDF"
-                accept=".pdf"
+                accept="application/pdf"
                 onChange={handleFileChange}
                 className="hidden"
               />
