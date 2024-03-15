@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# PDF Extractor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+PDF Extractor is a web application that allows users to upload PDF files, extract specific pages from them, and save the extracted pages as separate PDF files. The application provides integration with Cloudinary for storing and managing uploaded PDF files.
 
-## Available Scripts
+checkout live website [https://pdf-extractor-client-three.vercel.app/]
 
-In the project directory, you can run:
+this is the frontend repository checkout backend repository-[https://github.com/Srikanthmallam/PDF-Extractor-server]
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **PDF Upload**: Users can upload PDF files to the application.
+- **Page Extraction**: Users can select specific pages from an uploaded PDF and extract them as separate PDF files. 
+- **Cloudinary Integration**: Integration with Cloudinary for storing and managing uploaded PDF files.
+- **User Authentication**: Secure user authentication using JWT tokens.
+- **User Authorization**: Restrict access to certain features based on user roles and permissions.
+- **User Profile**: Users can view their uploaded PDF files and manage them in their profile.
+- **Error Handling**: Comprehensive error handling and validation to ensure smooth user experience.
+- **Responsive Design**: Mobile-friendly user interface for seamless access across devices.
 
-### `npm run build`
+- - **Anonymous PDF Extraction**: Users can extract pages from PDF files without requiring to register or log in
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the Repository**: `git clone https://github.com/your-username/pdf-extractor.git`
+2. **Navigate to the Server Directory**: `cd pdf-extractor/server`
+3. **Install Dependencies**: `npm install`
+4. **Set Up Environment Variables**: Create a `.env` file based on the provided `.env.example` file and fill in the necessary variables.
+5. **Start the Server**: `npm start`
+6. **Navigate to the Client Directory**: `cd ../client`
+7. **Install Dependencies**: `npm install`
+8. **Start the Client**: `npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+1. **Register/Login**: Create an account or log in to access the application features.
+2. **Upload PDF**: Upload a PDF file using the provided interface.
+3. **Extract Pages**: Select specific pages from the uploaded PDF and extract them as separate PDF files.
+4. **Manage PDFs**: View and manage uploaded PDF files in your user profile.
+5. **Logout**: Securely log out from your account when done.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Frontend: React.js, Tailwind CSS
+- Backend: Node.js, Express.js
+- Database: MongoDB
+- Cloud Storage: Cloudinary
+- Authentication: JSON Web Tokens (JWT)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contributing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Contributions are welcome! Please follow these steps:
 
-## Learn More
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/new-feature`)
+3. Make your changes
+4. Commit your changes (`git commit -am 'Add new feature'`)
+5. Push to the branch (`git push origin feature/new-feature`)
+6. Create a pull request
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the [MIT License](LICENSE).
